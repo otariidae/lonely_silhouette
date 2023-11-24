@@ -19,10 +19,12 @@ print(lonely_silhouette("諸行無常の響きあり"))
 
 ## LICENSE
 
-CC0 1.0
+![](https://mirrors.creativecommons.org/presskit/icons/cc.svg) ![](https://mirrors.creativecommons.org/presskit/icons/zero.svg)
+
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
 see LICENSE file
 
 ## Acknowledgement
 
-This package uses the JMdict dictionary file that comes from [the JMdict/EDICT project](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) by [Electronic Dictionary Research and Development Group](https://www.edrdg.org/) (EDRDG) and is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) by them.
+This package uses the JMdict dictionary file that comes from [the JMdict/EDICT project](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) by [Electronic Dictionary Research and Development Group](https://www.edrdg.org/) (EDRDG). The dictionary file is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode) by them.
