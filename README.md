@@ -1,5 +1,11 @@
 > いや待て、この孤独な𝑆𝑖𝑙ℎ𝑜𝑢𝑒𝑡𝑡𝑒は…？
 
+## Installation
+
+```console
+pip install lonely-silhouette
+```
+
 ## Usage
 
 ```python
