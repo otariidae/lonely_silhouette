@@ -1,3 +1,4 @@
+from logging import getLogger
 from pathlib import Path
 from typing import Iterable, cast
 import xml.etree.ElementTree as ET
@@ -5,6 +6,8 @@ from jaconv import kata2hira
 from janome.tokenizer import Tokenizer, Token
 from .font_converter import FontConverter
 from .part_of_speech import PartOfSpeech
+
+logger = getLogger(__name__)
 
 
 class LonelySilhouetteMaker:
@@ -58,6 +61,7 @@ class LonelySilhouetteMaker:
                     break
 
         if token_to_be_lonely is None:
+            logger.debug("cannot find the word that should become a lonely silhouette")
             return text
 
         def lonely_silhouette_token(token: Token) -> str:
