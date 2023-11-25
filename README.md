@@ -23,6 +23,28 @@ print(lonely_silhouette("諸行無常の響きあり"))
 # 諸行無常の𝑒𝑐ℎ𝑜あり
 ```
 
+### Using programmatically
+
+```python
+from lonely_silhouette import lonely_silhouette, FontStyle
+
+print(lonely_silhouette("いや待て、この孤独なシルエットは…？"))
+# いや待て、この孤独な𝑠𝑖𝑙ℎ𝑜𝑢𝑒𝑡𝑡𝑒は…？
+
+print(lonely_silhouette("いや待て、この孤独なシルエットは…？", font_style=FontStyle.SCRIPT))
+# いや待て、この孤独な𝓈𝒾𝓁𝒽ℴ𝓊ℯ𝓉𝓉ℯは…？
+```
+
+### Using as CLI
+
+```console
+$ python -m lonely_silhouette "いや待て、この孤独なシルエットは…？"
+いや待て、この孤独な𝑠𝑖𝑙ℎ𝑜𝑢𝑒𝑡𝑡𝑒は…？
+
+$ python -m lonely_silhouette --font-style script "いや待て、この孤独なシルエットは…？"
+いや待て、この孤独な𝓈𝒾𝓁𝒽ℴ𝓊ℯ𝓉𝓉ℯは…？
+```
+
 ## LICENSE
 
 ![](https://mirrors.creativecommons.org/presskit/icons/cc.svg) ![](https://mirrors.creativecommons.org/presskit/icons/zero.svg)
