@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lonely_silhouette"
-version = "0.2.1"
+version = "0.2.2"
 description = "いや待て、この孤独な𝑆𝑖𝑙ℎ𝑜𝑢𝑒𝑡𝑡𝑒は…？"
 authors = ["otariidae <otariidae@users.noreply.github.com>"]
 readme = "README.md"
