@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Self
 
 
 @dataclass
@@ -9,7 +10,7 @@ class PartOfSpeech:
     subcategory3: str
 
     @classmethod
-    def from_raw_part_of_speech(cls, raw_part_of_speech: str):
+    def from_raw_part_of_speech(cls, raw_part_of_speech: str) -> Self:
         (
             category,
             subcategory1,

@@ -14,7 +14,8 @@ class FontConverter(ABC):
 
     # simple factory as a current barely sufficient solution
     @staticmethod
-    def create(font_style: FontStyle):
+    # TODO: How to define return type in simple factory method?
+    def create(font_style: FontStyle):  # type: ignore[no-untyped-def]
         if font_style == FontStyle.ITALIC:
             return Italicizer()
         if font_style == FontStyle.SCRIPT:
@@ -53,7 +54,8 @@ class Italicizer(FontConverter):
             "z": "𝑧",
         }
 
-        italic_string = text.translate(str.maketrans(italic_mapping))
+        trans_table = str.maketrans(italic_mapping)
+        italic_string = text.translate(trans_table)
         return italic_string
 
 
@@ -89,5 +91,6 @@ class Scriptizer(FontConverter):
             "z": "𝓏",
         }
 
-        script_string = text.translate(str.maketrans(script_mapping))
+        trans_table = str.maketrans(script_mapping)
+        script_string = text.translate(trans_table)
         return script_string

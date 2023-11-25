@@ -1,12 +1,13 @@
 from argparse import ArgumentParser
 from logging import DEBUG, basicConfig, getLogger
 import sys
+from typing import Sequence
 from lonely_silhouette import lonely_silhouette, FontStyle
 
 logger = getLogger(__name__)
 
 
-def main(argv=None):
+def main(argv: Sequence[str] | None = None) -> None:
     parser = ArgumentParser()
     parser.add_argument(
         "text",
