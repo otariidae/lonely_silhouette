@@ -34,6 +34,7 @@ jobs:
           rye sync
         env:
           RYE_VERSION: 0.15.2
+          RYE_INSTALL_OPTION: "--yes"
       - name: Build package
         run: rye build
 

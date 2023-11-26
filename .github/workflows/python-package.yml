@@ -25,6 +25,7 @@ jobs:
         rye sync
       env:
         RYE_VERSION: 0.15.2
+        RYE_INSTALL_OPTION: "--yes"
     - name: Lint with ruff
       run: rye run lintcheck
     - name: Format check with ruff
