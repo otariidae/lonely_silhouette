@@ -26,6 +26,6 @@ jobs:
     - name: Lint with ruff
       run: uv run ruff check .
     - name: Format check with ruff
-      run: rye run ruff format .
+      run: uv run ruff format .
     - name: Type check with mypy
-      run: rye run mypy .
+      run: uv run mypy .
