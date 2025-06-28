@@ -96,9 +96,9 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "mypy", specifier = ">=1.7.1" },
-    { name = "ruff", specifier = ">=0.1.6" },
-    { name = "types-requests", specifier = ">=2.31.0.10" },
+    { name = "mypy", specifier = ">=1.16.1" },
+    { name = "ruff", specifier = ">=0.12.1" },
+    { name = "types-requests", specifier = ">=2.32.4.20250611" },
 ]
 
 [[package]]
