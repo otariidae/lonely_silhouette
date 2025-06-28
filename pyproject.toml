@@ -35,6 +35,9 @@ dev = [
     "types-requests>=2.31.0.10",
 ]
 
+[tool.hatch.metadata]
+allow-direct-references = true
+
 [tool.mypy]
 strict = true
 ignore_missing_imports = true
