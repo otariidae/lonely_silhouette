@@ -9,8 +9,7 @@ class FontStyle(Enum):
 
 class FontConverter(ABC):
     @abstractmethod
-    def convert(self, text: str) -> str:
-        ...
+    def convert(self, text: str) -> str: ...
 
     # simple factory as a current barely sufficient solution
     @staticmethod
