@@ -41,6 +41,7 @@ class LonelySilhouetteMaker:
         for gloss in glosses:
             if gloss.text is not None:
                 yield gloss.text
+        return None
 
     def _translate_token_ja_to_en(self, token: Token) -> Iterable[str] | None:
         return self._translate_word_ja_to_en(token.surface, kata2hira(token.reading))
