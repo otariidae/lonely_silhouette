@@ -1,6 +1,6 @@
 [project]
 name = "lonely-silhouette"
-version = "0.2.3"
+version = "0.2.4"
 description = "いや待て、この孤独な𝑆𝑖𝑙ℎ𝑜𝑢𝑒𝑡𝑡𝑒は…？"
 authors = [
     { name = "otariidae", email = "otariidae@users.noreply.github.com" }
