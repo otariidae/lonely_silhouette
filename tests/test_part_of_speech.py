@@ -2,6 +2,7 @@
 import pytest
 from lonely_silhouette.part_of_speech import PartOfSpeech
 
+
 @pytest.mark.parametrize(
     "raw_part_of_speech, expected_category, expected_subcategory1, expected_subcategory2, expected_subcategory3",
     [
