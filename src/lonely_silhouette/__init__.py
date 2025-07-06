@@ -2,7 +2,7 @@ from __future__ import annotations
 from logging import getLogger, NullHandler
 from pathlib import Path
 from tempfile import NamedTemporaryFile
-from typing import TYPE_CHECKING, Never
+from typing import TYPE_CHECKING, Never, Protocol
 import httpx
 from .font_converter import FontConverter, FontStyle
 from .lonely_silhouette_maker import LonelySilhouetteMaker
@@ -26,8 +26,13 @@ def download_latest_jmdict_e(dest_file: SupportsWrite[bytes]) -> None:
     logger.debug("Saved successfully to the destination file")
 
 
-# TODO: How to define closure method type?
-def build_default_lonely_silhouette():  # type: ignore[no-untyped-def]
+class LonelySilhouetteCallable(Protocol):
+    def __call__(
+        self, text: str, *args: Never, font_style: FontStyle = FontStyle.ITALIC
+    ) -> str: ...
+
+
+def build_default_lonely_silhouette() -> LonelySilhouetteCallable:
     lonely_silhouette_maker_cache = None
 
     def default_lonely_silhouette(
@@ -47,4 +52,4 @@ def build_default_lonely_silhouette():  # type: ignore[no-untyped-def]
     return default_lonely_silhouette
 
 
-lonely_silhouette = build_default_lonely_silhouette()  # type: ignore[no-untyped-call]
+lonely_silhouette = build_default_lonely_silhouette()
