@@ -16,7 +16,7 @@ def test_from_raw_part_of_speech(
     expected_subcategory1,
     expected_subcategory2,
     expected_subcategory3,
-):
+) -> None:
     part_of_speech = PartOfSpeech.from_raw_part_of_speech(raw_part_of_speech)
     assert part_of_speech.category == expected_category
     assert part_of_speech.subcategory1 == expected_subcategory1
