@@ -3,7 +3,7 @@ from logging import getLogger, NullHandler
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 from typing import TYPE_CHECKING, Never
-import requests
+import httpx
 from .font_converter import FontConverter, FontStyle
 from .lonely_silhouette_maker import LonelySilhouetteMaker
 
@@ -19,7 +19,7 @@ logger.addHandler(NullHandler())
 
 
 def download_latest_jmdict_e(dest_file: SupportsWrite[bytes]) -> None:
-    response = requests.get("http://ftp.edrdg.org/pub/Nihongo/JMdict_e")
+    response = httpx.get("http://ftp.edrdg.org/pub/Nihongo/JMdict_e")
     response.raise_for_status()
     logger.debug("File downloaded successfully")
     dest_file.write(response.content)
