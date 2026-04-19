@@ -51,7 +51,9 @@ class LonelySilhouetteMaker:
         return part_of_speech.category == "名詞"
 
     def make(self, text: str, font_converter: FontConverter) -> str:
-        tokens = list(self.tokenizer.tokenize(text))
+        tokens = [
+            token for token in self.tokenizer.tokenize(text) if isinstance(token, Token)
+        ]
         # the last translatable token will be lonely silhouette
         token_to_be_lonely = None
         for token in reversed(tokens):
@@ -67,9 +69,7 @@ class LonelySilhouetteMaker:
 
         def lonely_silhouette_token(token: Token) -> str:
             if token != token_to_be_lonely[0]:
-                return cast(
-                    str, token.surface
-                )  # TODO: mypy does not recognize token.surface
+                return cast(str, token.surface)
             en_words = token_to_be_lonely[1]
             # pick first word for now
             return font_converter.convert(en_words[0])

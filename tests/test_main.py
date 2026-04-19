@@ -1,4 +1,3 @@
-# mypy: disable-error-code=no-untyped-def
 from io import StringIO
 import pytest
 from lonely_silhouette.__main__ import main

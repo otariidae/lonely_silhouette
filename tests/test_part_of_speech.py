@@ -1,4 +1,3 @@
-# mypy: disable-error-code=no-untyped-def
 import pytest
 from lonely_silhouette.part_of_speech import PartOfSpeech
 
