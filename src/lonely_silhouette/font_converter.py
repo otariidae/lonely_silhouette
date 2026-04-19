@@ -13,12 +13,12 @@ class FontConverter(ABC):
 
     # simple factory as a current barely sufficient solution
     @staticmethod
-    # TODO: How to define return type in simple factory method?
-    def create(font_style: FontStyle):  # type: ignore[no-untyped-def]
+    def create(font_style: FontStyle) -> "FontConverter":
         if font_style == FontStyle.ITALIC:
             return Italicizer()
         if font_style == FontStyle.SCRIPT:
             return Scriptizer()
+        raise ValueError(f"Unsupported font style: {font_style}")
 
 
 class Italicizer(FontConverter):
